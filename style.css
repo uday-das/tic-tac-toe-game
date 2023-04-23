@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffecc7;
+}
+
+nav {
+    background-color: rgb(79, 10, 106);
+    color: white;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 12px;
+    font-family: 'Dosis', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+a:hover {
+    color: orange;
+    transform: scale(1.1);
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Signika', sans-serif;
+    position: relative;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    cursor: pointer;
+}
+
+.info {
+    font-size: 22px;
+}
+
+.gameInfo {
+    padding: 0 34px;
+    font-family: 'Signika', sans-serif;
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 1px 18px;
+    background-color: rgb(168, 255, 37);
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: 'Signika', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+}
+
+#reset:hover {
+    transform: scale(1.1);
+}
+
+.line {
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: rgb(79, 10, 106);
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+
+    .gameInfo {
+        margin-top: 34px;
+    }
+
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+
+    .line {
+        height: 3px;
+        width: 0;
+        position: absolute;
+    }
+}
